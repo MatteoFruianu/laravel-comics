@@ -13,10 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
 
-    $comics = config('comics');
-    // dd($comics);
+// METODO A
+// Route::get('/', function () {
 
-    return view('home', compact('comics')  );
-});
+//     $comics = config('comics');
+//     // dd($comics);
+
+//     return view('home', compact('comics')  );
+// })->name('home');
+
+
+// METODO B
+Route::get('/', 'HomeController@index')->name('home');
+
+
+// COMICS DETAIL
+
+Route::get('/comic/{id}', 'ComicController@show')->name('comic-detail');

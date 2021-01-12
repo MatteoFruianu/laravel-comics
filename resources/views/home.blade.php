@@ -12,10 +12,10 @@
 
         <section class="comics mt-3 mb-3">
             <div class="container">
-                <ul class="comic-list">
+                <ul class="comics-list">
                     @foreach ($comics as $comic)
                         <li>
-                            <a href="">
+                            <a href="{{ route('comic-detail' , $comic['id']) }}">
                                 <img src="{{ $comic['image'] }}" alt="{{ $comic['title'] }}">
                                 <h3> {{ $comic['title'] }} </h3>
                             </a>

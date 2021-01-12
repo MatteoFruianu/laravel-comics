@@ -1,0 +1,15 @@
+
+.comics {
+    background: #1c1c1c;
+}
+
+.comics-list {
+    
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1rem;
+    img {
+        width: 100%;
+    }
+}
